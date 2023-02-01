@@ -45,7 +45,7 @@ func (g *Group[T]) ReleaseAll() {
 // It should be called to remove the channel from the group and close it.
 // It's safe to call [ReleaseFunc] several times as well as in parallel with [Group.ReleaseAll].
 func (g *Group[T]) Acquire() (<-chan T, ReleaseFunc) {
-	ch := g.channels.Insert(&channel[T]{
+	ch := g.channels.Append(&channel[T]{
 		ch:      make(chan T),
 		done:    make(chan struct{}),
 		send:    sync.WaitGroup{},
