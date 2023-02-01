@@ -31,6 +31,7 @@ import (
 	"fmt"
 	"sync"
 	"time"
+
 	"github.com/maratori/changroup"
 )
 
@@ -83,6 +84,7 @@ import (
 	"fmt"
 	"sync"
 	"time"
+
 	"github.com/maratori/changroup"
 )
 
@@ -142,6 +144,7 @@ import (
 	"fmt"
 	"sync"
 	"time"
+
 	"github.com/maratori/changroup"
 )
 
