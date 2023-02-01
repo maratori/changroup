@@ -25,8 +25,8 @@ type node[T any] struct {
 	list *list[T]
 }
 
-// Insert inserts new node to the end of the list.
-func (l *list[T]) Insert(elem T) *node[T] {
+// Append inserts new node to the end of the list.
+func (l *list[T]) Append(elem T) *node[T] {
 	l.mu.Lock()
 	defer l.mu.Unlock()
 	n := &node[T]{

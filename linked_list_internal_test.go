@@ -13,11 +13,11 @@ func TestList(t *testing.T) {
 		l := newList[int]()
 		assertForEach(t, l, nil)
 	})
-	t.Run("insert 1 element", func(t *testing.T) {
+	t.Run("append 1 element", func(t *testing.T) {
 		t.Parallel()
 		l := newList[int]()
 
-		a := l.Insert(10)
+		a := l.Append(10)
 
 		assertForEach(t, l, []int{10})
 		assert.Same(t, a, l.first)
@@ -28,7 +28,7 @@ func TestList(t *testing.T) {
 	t.Run("delete 1 element", func(t *testing.T) {
 		t.Parallel()
 		l := newList[int]()
-		a := l.Insert(10)
+		a := l.Append(10)
 
 		a.Delete()
 
@@ -38,12 +38,12 @@ func TestList(t *testing.T) {
 		assert.Nil(t, a.prev)
 		assert.Nil(t, a.next)
 	})
-	t.Run("insert 2 elements", func(t *testing.T) {
+	t.Run("append 2 elements", func(t *testing.T) {
 		t.Parallel()
 		l := newList[int]()
 
-		a := l.Insert(10)
-		b := l.Insert(20)
+		a := l.Append(10)
+		b := l.Append(20)
 
 		assertForEach(t, l, []int{10, 20})
 		assert.Same(t, a, l.first)
@@ -56,8 +56,8 @@ func TestList(t *testing.T) {
 	t.Run("delete last from 2 elements", func(t *testing.T) {
 		t.Parallel()
 		l := newList[int]()
-		a := l.Insert(10)
-		b := l.Insert(20)
+		a := l.Append(10)
+		b := l.Append(20)
 
 		b.Delete()
 
@@ -72,8 +72,8 @@ func TestList(t *testing.T) {
 	t.Run("delete first from 2 elements", func(t *testing.T) {
 		t.Parallel()
 		l := newList[int]()
-		a := l.Insert(10)
-		b := l.Insert(20)
+		a := l.Append(10)
+		b := l.Append(20)
 
 		a.Delete()
 
@@ -85,13 +85,13 @@ func TestList(t *testing.T) {
 		assert.Nil(t, b.prev)
 		assert.Nil(t, b.next)
 	})
-	t.Run("insert 3 elements", func(t *testing.T) {
+	t.Run("append 3 elements", func(t *testing.T) {
 		t.Parallel()
 		l := newList[int]()
 
-		a := l.Insert(10)
-		b := l.Insert(20)
-		c := l.Insert(30)
+		a := l.Append(10)
+		b := l.Append(20)
+		c := l.Append(30)
 
 		assertForEach(t, l, []int{10, 20, 30})
 		assert.Same(t, a, l.first)
@@ -106,9 +106,9 @@ func TestList(t *testing.T) {
 	t.Run("delete last from 3 elements", func(t *testing.T) {
 		t.Parallel()
 		l := newList[int]()
-		a := l.Insert(10)
-		b := l.Insert(20)
-		c := l.Insert(30)
+		a := l.Append(10)
+		b := l.Append(20)
+		c := l.Append(30)
 
 		c.Delete()
 
@@ -125,9 +125,9 @@ func TestList(t *testing.T) {
 	t.Run("delete first from 3 elements", func(t *testing.T) {
 		t.Parallel()
 		l := newList[int]()
-		a := l.Insert(10)
-		b := l.Insert(20)
-		c := l.Insert(30)
+		a := l.Append(10)
+		b := l.Append(20)
+		c := l.Append(30)
 
 		a.Delete()
 
@@ -144,9 +144,9 @@ func TestList(t *testing.T) {
 	t.Run("delete middle from 3 elements", func(t *testing.T) {
 		t.Parallel()
 		l := newList[int]()
-		a := l.Insert(10)
-		b := l.Insert(20)
-		c := l.Insert(30)
+		a := l.Append(10)
+		b := l.Append(20)
+		c := l.Append(30)
 
 		b.Delete()
 

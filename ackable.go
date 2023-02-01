@@ -49,7 +49,7 @@ func (g *AckableGroup[T]) ReleaseAll() {
 // It should be called to remove the channel from the group and close it.
 // It's safe to call [ReleaseFunc] several times as well as in parallel with [AckableGroup.ReleaseAll].
 func (g *AckableGroup[T]) Acquire() (<-chan Ackable[T], ReleaseFunc) {
-	ch := g.channels.Insert(&channel[Ackable[T]]{
+	ch := g.channels.Append(&channel[Ackable[T]]{
 		ch:      make(chan Ackable[T]),
 		done:    make(chan struct{}),
 		send:    sync.WaitGroup{},
