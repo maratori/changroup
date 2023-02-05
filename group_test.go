@@ -200,7 +200,7 @@ func waitChan[T any](t *testing.T, ch <-chan T) T {
 		return v
 	case <-time.After(5 * time.Second):
 		require.Fail(t, "timeout")
-		panic(nil)
+		panic("")
 	}
 }
 
