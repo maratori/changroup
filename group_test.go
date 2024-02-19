@@ -99,7 +99,7 @@ func TestGroup(t *testing.T) { //nolint:gocognit // yeah
 		}()
 		go func() {
 			defer close(done2)
-			waitChan(t, done1)
+			waitChan(t, done1) //nolint:testifylint // it's ok to use require here
 			group.Send(2)
 		}()
 		time.Sleep(time.Second)
