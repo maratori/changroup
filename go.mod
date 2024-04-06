@@ -1,6 +1,6 @@
 module github.com/maratori/changroup
 
-go 1.20
+go 1.18 // minimal supported
 
 require github.com/stretchr/testify v1.4.0
 
