@@ -16,6 +16,11 @@ test-cover: ## run all tests with code coverage
 	go test -race -p 8 -parallel 8 -timeout 1m -coverpkg ./... -coverprofile coverage.out ./...
 .PHONY: test-cover
 
+test-latest-deps: ## run all tests with latest dependencies
+	@echo "+ $@"
+	go test -modfile .github/latest-deps/go.mod -race -p 8 -parallel 8 -timeout 1m ./...
+.PHONY: test
+
 lint: build-docker-dev ## run linter
 	@echo "+ $@"
 	$(RUN_IN_DOCKER) golangci-lint run
