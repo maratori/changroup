@@ -32,6 +32,15 @@ jobs:
       - run: make test-cover
       - uses: codecov/codecov-action@v3
 
+  test-latest-deps:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.22.2" # update together with dev.dockerfile
+      - run: make test-latest-deps
+
   lint:
     runs-on: ubuntu-latest
     steps:
