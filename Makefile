@@ -50,7 +50,7 @@ check-tidy: ## ensure go.mod is tidy
 	diff -u .github/latest-deps/imports.go .github/latest-deps/imports.check.go
 	rm .github/latest-deps/imports.check.go
 
-	go mod tidy -diff modfile=.github/latest-deps/go.mod
+	go mod tidy -diff -modfile=.github/latest-deps/go.mod
 .PHONY: check-tidy
 
 build-docker-dev: ## build development image from Dockerfile.dev
