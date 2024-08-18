@@ -1,6 +1,6 @@
 module github.com/maratori/changroup
 
-// Tested all go versions from 1.18 to 1.22
+// Tested all go versions from 1.18 to 1.23
 go 1.18
 
 require github.com/stretchr/testify v1.4.0
