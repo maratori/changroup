@@ -1,0 +1,8 @@
+# This file specifies the exclusions needed for compatibility with older Go versions and dependencies.
+# It is merged with the main .golangci.yml file to run the linter using the latest dependencies and go.mod.
+issues:
+  exclude-rules:
+    # patch for latest deps
+    - text: "for loop can be changed to use an integer range \\(Go 1.22\\+\\)" # go 1.18
+      linters:
+        - intrange
