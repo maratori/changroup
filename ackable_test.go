@@ -6,8 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/maratori/changroup"
 	"github.com/stretchr/testify/require"
+
+	"github.com/maratori/changroup"
 )
 
 func TestAckableChanGroup(t *testing.T) { //nolint:gocognit // yeah
