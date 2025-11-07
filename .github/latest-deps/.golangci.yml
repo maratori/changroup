@@ -4,6 +4,12 @@ linters:
   exclusions:
     rules:
       # patch for latest deps
-      - text: 'for loop can be changed to use an integer range \(Go 1.22\+\)' # go 1.18
+      - text: 'for loop can be changed to use an integer range \(Go 1.22\+\)' # remove after go 1.22+
         linters:
           - intrange
+      - text: 'rangeint: for loop can be modernized using range over int' # remove after go 1.22+
+        linters:
+          - modernize
+      - text: 'waitgroup: Goroutine creation can be simplified using WaitGroup.Go' # remove after go 1.25+
+        linters:
+          - modernize

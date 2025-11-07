@@ -10,7 +10,7 @@
 
 ## Generics
 
-The minimal supported go version is 1.18 because the library uses generics.
+The minimal supported go version is 1.19 because the library uses generics.
 
 ## Installation
 
