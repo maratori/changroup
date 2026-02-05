@@ -1,4 +1,4 @@
-# changroup <br> [![go minimal version][go-img]][go-url] [![go tested version][go-latest-img]][go-latest-url] [![CI][ci-img]][ci-url] [![Codecov][codecov-img]][codecov-url] [![Maintainability][codeclimate-img]][codeclimate-url] [![Go Report Card][goreportcard-img]][goreportcard-url] [![License][license-img]][license-url] [![Go Reference][godoc-img]][godoc-url]
+# changroup <br> [![go minimal version][go-img]][go-url] [![go tested version][go-latest-img]][go-latest-url] [![CI][ci-img]][ci-url] [![Codecov][codecov-img]][codecov-url] [![Go Report Card][goreportcard-img]][goreportcard-url] [![License][license-img]][license-url] [![Go Reference][godoc-img]][godoc-url]
 
 
 `changroup` is a Go library to create a group of channels (publish/subscribe pattern). A value is sent to each channel in the group. Channels can be acquired/released dynamically.
@@ -207,8 +207,6 @@ You are welcome to create an issue or pull request with improvements and fixes. 
 [ci-url]: https://github.com/maratori/changroup/actions/workflows/ci.yml
 [codecov-img]: https://codecov.io/gh/maratori/changroup/branch/main/graph/badge.svg?token=vbDpr5rl0h
 [codecov-url]: https://codecov.io/gh/maratori/changroup
-[codeclimate-img]: https://api.codeclimate.com/v1/badges/ff2cd8265ab506c847d4/maintainability
-[codeclimate-url]: https://codeclimate.com/github/maratori/changroup/maintainability
 [goreportcard-img]: https://goreportcard.com/badge/github.com/maratori/changroup
 [goreportcard-url]: https://goreportcard.com/report/github.com/maratori/changroup
 [license-img]: https://img.shields.io/github/license/maratori/changroup.svg
