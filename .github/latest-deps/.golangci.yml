@@ -10,6 +10,6 @@ linters:
       - text: 'rangeint: for loop can be modernized using range over int' # remove after go 1.22+
         linters:
           - modernize
-      - text: 'waitgroup: Goroutine creation can be simplified using WaitGroup.Go' # remove after go 1.25+
+      - text: 'waitgroupgo: Goroutine creation can be simplified using WaitGroup.Go' # remove after go 1.25+
         linters:
           - modernize
